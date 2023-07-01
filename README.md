@@ -42,6 +42,3 @@ https://www.coolapk.com/feed/38579891?shareKey=NGI3ZGZlZTM4MDBjNjMwMzdlM2M~&shar
 ![image](https://raw.githubusercontent.com/limoest/daily_reminder/main/others/Snipaste_2022-08-24_12-13-19.png)
 ![image](https://raw.githubusercontent.com/limoest/daily_reminder/main/others/Snipaste.png)
 
-
-
-有别的建议欢迎留言.
