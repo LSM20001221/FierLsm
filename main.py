@@ -137,8 +137,18 @@ def send_message(to_user, access_token, region_name, weather, temp, wind_dir, no
     love_day1 = int(config["love_date1"].split("-")[2])
     love_date1 = date(love_year1, love_month1, love_day1)
     # 获取结婚的日期差
-    # love_days1 = str(today.__sub__(love_date1)).split(" ")[0]
-    love_days1 = str(love_date1.__sub__(today)).split(" ")[0]
+    love_days1 = str(today.__sub__(love_date1)).split(" ")[0]
+
+    # 获取举办婚礼的日期格式
+    love_year2 = int(config["love_date2"].split("-")[0])
+    love_month2 = int(config["love_date2"].split("-")[1])
+    love_day2 = int(config["love_date2"].split("-")[2])
+    love_date2 = date(love_year2, love_month2, love_day2)
+    # 获取举办婚礼的日期差
+    # love_days2 = str(today.__sub__(love_date2)).split(" ")[0]
+    love_days2 = str(love_date2.__sub__(today)).split(" ")[0]
+
+ 
     # 获取所有生日数据
     birthdays = {}
     for k, v in config.items():
@@ -176,6 +186,10 @@ def send_message(to_user, access_token, region_name, weather, temp, wind_dir, no
             },
             "love_day1": {
                 "value": love_days1,
+                "color": get_color()
+            },
+            "love_day2": {
+                "value": love_days2,
                 "color": get_color()
             },
             "note_en": {
