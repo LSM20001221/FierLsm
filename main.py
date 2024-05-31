@@ -137,8 +137,8 @@ def send_message(to_user, access_token, region_name, weather, temp, wind_dir, no
     love_day1 = int(config["love_date1"].split("-")[2])
     love_date1 = date(love_year1, love_month1, love_day1)
     # 获取结婚的日期差
-    love_days1 = str(today.__sub__(love_date1)).split(" ")[0]
- 
+    # love_days1 = str(today.__sub__(love_date1)).split(" ")[0]
+    love_days1 = str(love_date1.__sub__(today)).split(" ")[0]
     # 获取所有生日数据
     birthdays = {}
     for k, v in config.items():
