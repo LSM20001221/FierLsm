@@ -145,8 +145,10 @@ def send_message(to_user, access_token, region_name, weather, temp, wind_dir, no
     love_day2 = int(config["love_date2"].split("-")[2])
     love_date2 = date(love_year2, love_month2, love_day2)
     # 获取举办婚礼的日期差
-    # love_days2 = str(today.__sub__(love_date2)).split(" ")[0]
-    love_days2 = str(love_date2.__sub__(today)).split(" ")[0]
+    # 正值数
+    love_days2 = str(today.__sub__(love_date2)).split(" ")[0]
+    # 负值数
+    # love_days2 = str(love_date2.__sub__(today)).split(" ")[0]
 
  
     # 获取所有生日数据
